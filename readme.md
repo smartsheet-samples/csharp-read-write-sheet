@@ -14,10 +14,12 @@ This is implemented in the `evaluateRowAndBuildUpdates()` method which you shoul
 
 ## Setup
 Import the sample data from "Sample Sheet.xlsx" into a new sheet
+
 Update the App.config file with these two settings:
 * An API access token, obtained from the Smartsheet Account button, under Personal settings
 * The Sheet Id, obtained from sheet properties 
 
 Build and run the application.
+
 The rows marked "Complete" will have the "Remaining" value set to 0. (Note that you will have to refresh in the desktop application to see the changes)
 
