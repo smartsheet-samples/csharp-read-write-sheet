@@ -1,4 +1,4 @@
-## csharp-read-write-sample
+## csharp-read-write-sheet
 
 This is a minimal Smartsheet sample that demonstrates how to
 * Load a sheet
