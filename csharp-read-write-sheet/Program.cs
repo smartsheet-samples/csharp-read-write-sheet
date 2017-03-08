@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,7 @@ namespace csharp_read_write_sheet
 {
     class Program
     {
-        // The API identifies columns by Id, but its more convenient to refer to column names
+        // The API identifies columns by Id, but it's more convenient to refer to column names
         static Dictionary<string, long> columnMap = new Dictionary<string, long>(); // Map from friendly column name to column Id 
 
         static void Main(string[] args)
