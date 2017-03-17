@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 
+// Add nuget reference to smartsheet-csharp-sdk (https://www.nuget.org/packages/smartsheet-csharp-sdk/)
 using Smartsheet.Api;
 using Smartsheet.Api.Models;
 using Smartsheet.Api.OAuth;
