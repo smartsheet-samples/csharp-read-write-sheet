@@ -2,6 +2,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.userprefs
 
 **/packages/*
 
