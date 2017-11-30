@@ -77,16 +77,17 @@ namespace csharp_read_write_sheet
                 if (remainingCell.DisplayValue != "0")                  // Skip if "Remaining" is already zero
                 {
                     Console.WriteLine("Need to update row # " + sourceRow.RowNumber);
-                    // We need to update this row, so create a rowBuilder and list of cells to update
-                    var rowBuilder = new Row.UpdateRowBuilder(sourceRow.Id);
+
+					var cellToUpdate = new Cell();
+                    cellToUpdate.ColumnId = columnMap["Remaining"];
+                    cellToUpdate.Value = "";
+
                     var cellsToUpdate = new List<Cell>();
-
-                    // Build each new cell value
-                    var cellToUpdate = new Cell.UpdateCellBuilder(columnMap["Remaining"], 0).Build();   // Set value to 0
-
-                    // Add to update list
                     cellsToUpdate.Add(cellToUpdate);
-                    rowToUpdate = rowBuilder.SetCells(cellsToUpdate).Build();
+
+                    rowToUpdate = new Row();
+                    rowToUpdate.Id = sourceRow.Id;
+                    rowToUpdate.Cells = cellsToUpdate;
                 }
             }
             return rowToUpdate;
