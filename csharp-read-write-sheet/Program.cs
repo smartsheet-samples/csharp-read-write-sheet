@@ -78,16 +78,20 @@ namespace csharp_read_write_sheet
                 {
                     Console.WriteLine("Need to update row # " + sourceRow.RowNumber);
 
-					var cellToUpdate = new Cell();
-                    cellToUpdate.ColumnId = columnMap["Remaining"];
-                    cellToUpdate.Value = "";
+                    var cellToUpdate = new Cell
+                    {
+                        ColumnId = columnMap["Remaining"],
+                        Value = 0
+                    };
 
                     var cellsToUpdate = new List<Cell>();
                     cellsToUpdate.Add(cellToUpdate);
 
-                    rowToUpdate = new Row();
-                    rowToUpdate.Id = sourceRow.Id;
-                    rowToUpdate.Cells = cellsToUpdate;
+                    rowToUpdate = new Row
+                    {
+                        Id = sourceRow.Id,
+                        Cells = cellsToUpdate
+                    };
                 }
             }
             return rowToUpdate;
