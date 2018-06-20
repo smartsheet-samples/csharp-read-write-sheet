@@ -26,15 +26,13 @@ namespace csharp_read_write_sheet
             if (string.IsNullOrEmpty(accessToken))
                 throw new Exception("Must set API access token in App.conf file");
 
-            // Get sheet Id from App.config file 
-            string sheetIdString = ConfigurationManager.AppSettings["SheetId"];
-            long sheetId = long.Parse(sheetIdString);
-
             // Initialize client
             SmartsheetClient ss = new SmartsheetBuilder().SetAccessToken(accessToken).Build();
 
+            Sheet sheet = ss.SheetResources.ImportXlsSheet("../../../Sample Sheet.xlsx", null, 0, null);
+            
             // Load the entire sheet
-            Sheet sheet = ss.SheetResources.GetSheet(sheetId, null, null, null, null, null, null, null);
+            sheet = ss.SheetResources.GetSheet(sheet.Id.Value, null, null, null, null, null, null, null);
             Console.WriteLine("Loaded " + sheet.Rows.Count + " rows from sheet: " + sheet.Name);
 
             // Build column map for later reference
@@ -53,7 +51,7 @@ namespace csharp_read_write_sheet
 
             // Finally, write all updated cells back to Smartsheet 
             Console.WriteLine("Writing " + rowsToUpdate.Count + " rows back to sheet id " + sheet.Id);
-            ss.SheetResources.RowResources.UpdateRows(sheetId, rowsToUpdate);
+            ss.SheetResources.RowResources.UpdateRows(sheet.Id.Value, rowsToUpdate);
             Console.WriteLine("Done (Hit enter)");
             Console.ReadLine();
         }
