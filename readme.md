@@ -1,6 +1,7 @@
 ## csharp-read-write-sheet
 
 This is a minimal Smartsheet sample that demonstrates how to
+* Import a sheet
 * Load a sheet
 * Loop through the rows
 * Check for rows that meet a criteria
@@ -13,11 +14,7 @@ This is implemented in the `evaluateRowAndBuildUpdates()` method which you shoul
 
 
 ## Setup
-Import the sample data from "Sample Sheet.xlsx" into a new sheet
-
-Update the App.config file with these two settings:
-* An API access token, obtained from the Smartsheet Account button, under Personal settings
-* The Sheet Id, obtained from sheet properties 
+Update the App.config file with an API access token, obtained from the Smartsheet Account button, under Personal settings
 
 Build and run the application.
 
