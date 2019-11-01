@@ -14,7 +14,7 @@ This is implemented in the `evaluateRowAndBuildUpdates()` method which you shoul
 
 
 ## Setup
-Update the App.config file with an API access token, obtained from the Smartsheet Account button, under Personal settings
+Set the system environment variable `SMARTSHEET_ACCESS_TOKEN` to the value of your access token, obtained from the Smartsheet Account button, under Personal settings.
 
 Build and run the application.
 
