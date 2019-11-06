@@ -19,15 +19,8 @@ namespace csharp_read_write_sheet
 
         static void Main(string[] args)
         {
-            // Get API access token from App.config file or environment
-            string accessToken = ConfigurationManager.AppSettings["AccessToken"];
-            if (string.IsNullOrEmpty(accessToken))
-                accessToken = Environment.GetEnvironmentVariable("SMARTSHEET_ACCESS_TOKEN");
-            if (string.IsNullOrEmpty(accessToken))
-                throw new Exception("Must set API access token in App.conf file");
-
-            // Initialize client
-            SmartsheetClient smartsheet = new SmartsheetBuilder().SetAccessToken(accessToken).Build();
+            // Initialize client. Uses API access token from environment variable SMARTSHEET_ACCESS_TOKEN
+            SmartsheetClient smartsheet = new SmartsheetBuilder().Build();
 
             Sheet sheet = smartsheet.SheetResources.ImportXlsSheet("../../../Sample Sheet.xlsx", null, 0, null);
             
