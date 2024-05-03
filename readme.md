@@ -1,3 +1,17 @@
+# ⚠️ Notice: this repository has been deprecated ⚠️
+
+This .NET 4 sample has been replaced with the new .NET Core Smartsheet C# SDK and can be accessed [here](https://github.com/smartsheet/smartsheet-csharp-sdk/tree/mainline/sdk-csharp-sample-net80)
+
+## See also
+- https://github.com/smartsheet/smartsheet-csharp-sdk
+- http://smartsheet-platform.github.io/api-docs/
+- https://www.smartsheet.com/
+
+
+
+---
+---
+
 ## csharp-read-write-sheet
 
 This is a minimal Smartsheet sample that demonstrates how to
@@ -20,7 +34,3 @@ Build and run the application.
 
 The rows marked "Complete" will have the "Remaining" value set to 0. (Note that you will have to refresh in the desktop application to see the changes)
 
-## See also
-- https://github.com/smartsheet-platform/smartsheet-csharp-sdk
-- http://smartsheet-platform.github.io/api-docs/
-- https://www.smartsheet.com/
