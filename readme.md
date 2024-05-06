@@ -4,7 +4,7 @@ This .NET 4 sample has been replaced with the new .NET Core Smartsheet C# SDK an
 
 ## See also
 - https://github.com/smartsheet/smartsheet-csharp-sdk
-- http://smartsheet-platform.github.io/api-docs/
+- https://smartsheet.redoc.ly
 - https://www.smartsheet.com/
 
 
